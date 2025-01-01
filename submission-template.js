@@ -7,6 +7,10 @@ const findSum = function(array) {
   return sum;
 };
 
+//array = [1,2,3];
+//result = findSum(array);
+//console.log(result);
+
 const findFrequency = function(array) {
   // your code here - don't forget to return an object!
   let mostFreq = 0;
@@ -33,7 +37,7 @@ const findFrequency = function(array) {
       least = comp1;
     }
   }
-  return {most, least};
+  return {most: most, least: least};
 };
 
 const isPalindrome = function(str) {
@@ -47,6 +51,10 @@ const isPalindrome = function(str) {
   return true;
 };
 
+//str = "canal";
+//result = isPalindrome(str);
+//console.log(result);
+
 const largestPair = function(array) {
   // your code here - don't forget to return a number!
   let prod = array[0] * array[1];
@@ -57,6 +65,10 @@ const largestPair = function(array) {
   }
   return prod;
 };
+
+//array = [1,3,5,8];
+//result = largestPair(array);
+//console.log(result);
 
 const removeParenth = function(str) {
   // your code here - don't forget to return a string!
