@@ -21,8 +21,10 @@ const findFrequency = function(array) {
 
   for (let i=0; i<array.length-1; i++) {
     let comp1 = array[i];
-    mostFreq++;
-    for (let j=indexAt(array[i+1]); j<array.length; j++) {
+    mostFreq = 1;
+    //console.log(most);
+
+    for (let j=i+1; j<array.length; j++) {
       let comp2 = array[j];
       if (comp1 == comp2) {
         mostFreq++;
@@ -31,14 +33,21 @@ const findFrequency = function(array) {
     if (mostFreq > mostTemp) {
       mostTemp = mostFreq;
       most = comp1;
+
     }
-    if (mostFreq < leastFreq) {
+    if (mostFreq <= leastFreq) {
       leastFreq = mostFreq;
       least = comp1;
+      //console.log(least);
+
     }
   }
   return {most: most, least: least};
 };
+
+//array = ['a', 'a', 'b', 'b', 'c', 'd', 'd', 'd'] ;
+//result = findFrequency(array);
+//console.log(result);
 
 const isPalindrome = function(str) {
   // your code here - don't forget to return a boolean!
