@@ -21,10 +21,10 @@ const findFrequency = function(array) {
 
   for (let i=0; i<array.length-1; i++) {
     let comp1 = array[i];
-    mostFreq = 1;
+    mostFreq = 0;
     //console.log(most);
 
-    for (let j=i+1; j<array.length; j++) {
+    for (let j=0; j<array.length; j++) {
       let comp2 = array[j];
       if (comp1 == comp2) {
         mostFreq++;
@@ -35,7 +35,7 @@ const findFrequency = function(array) {
       most = comp1;
 
     }
-    if (mostFreq <= leastFreq) {
+    if (mostFreq < leastFreq) {
       leastFreq = mostFreq;
       least = comp1;
       //console.log(least);
@@ -45,7 +45,7 @@ const findFrequency = function(array) {
   return {most: most, least: least};
 };
 
-//array = ['a', 'a', 'b', 'b', 'c', 'd', 'd', 'd'] ;
+//array = ['a', 'banana', 'a', 'd', 'd', 'd', 'd', 'b', 'b', 'c', 'c'] ;
 //result = findFrequency(array);
 //console.log(result);
 
